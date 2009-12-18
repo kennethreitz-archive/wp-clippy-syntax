@@ -1,32 +1,16 @@
 <?php
 /*
-Plugin Name: WP-Syntax
-Plugin URI: http://wordpress.org/extend/plugins/wp-syntax/
+Plugin Name: Syntax Hilight w/ Clippy!
+Plugin URI: http://github.com/kennethreitz/wp-clippy-syntax-plugin
 Description: Syntax highlighting using <a href="http://qbnz.com/highlighter/">GeSHi</a> supporting a wide range of popular languages.  Wrap code blocks with <code>&lt;pre lang="LANGUAGE" line="1"&gt;</code> and <code>&lt;/pre&gt;</code> where <code>LANGUAGE</code> is a geshi supported language syntax.  The <code>line</code> attribute is optional.
-Author: Ryan McGeary
-Version: 0.9.8
-Author URI: http://ryan.mcgeary.org/
+Author: Kenneth Reitz
+Version: 0.5.2
+Author URI: http://kennethreitz.com
 */
 
-#
-#  Copyright (c) 2007-2009 Ryan McGeary
-#
-#  This file is part of WP-Syntax.
-#
-#  WP-Syntax is free software; you can redistribute it and/or modify it under
-#  the terms of the GNU General Public License as published by the Free
-#  Software Foundation; either version 2 of the License, or (at your option)
-#  any later version.
-#
-#  WP-Syntax is distributed in the hope that it will be useful, but WITHOUT ANY
-#  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-#  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
-#  details.
-#
-#  You should have received a copy of the GNU General Public License along
-#  with WP-Syntax; if not, write to the Free Software Foundation, Inc., 59
-#  Temple Place, Suite 330, Boston, MA 02111-1307 USA
-#
+#  WP-Syntax Copyright (c) 2007-2009 Ryan McGeary
+#  Kenneth Reitz extended it. Take a look:
+
 
 // Override allowed attributes for pre tags in order to use <pre lang=""> in
 // comments. For more info see wp-includes/kses.php
