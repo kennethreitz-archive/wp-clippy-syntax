@@ -2,7 +2,7 @@
 /*
 Plugin Name: Syntax Hilight w/ Clippy!
 Plugin URI: http://github.com/kennethreitz/wp-clippy-syntax-plugin
-Description: Syntax highlighting using <a href="http://qbnz.com/highlighter/">GeSHi</a> supporting a wide range of popular languages.  Wrap code blocks with <code>&lt;pre lang="LANGUAGE" line="1"&gt;</code> and <code>&lt;/pre&gt;</code> where <code>LANGUAGE</code> is a geshi supported language syntax.  The <code>line</code> attribute is optional.
+Description: Syntax highlighting using <a href="http://qbnz.com/highlighter/">GeSHi</a> supporting a wide range of popular languages.  One-click copy and paste. Awesome.
 Author: Kenneth Reitz
 Version: 0.5.2
 Author URI: http://kennethreitz.com
