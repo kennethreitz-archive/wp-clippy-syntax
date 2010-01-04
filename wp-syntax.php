@@ -59,6 +59,12 @@ bgcolor="#FFFFFF"
 </object>';
 }
 
+function str_chop_lines($str, $lines = 4) {
+    return implode("\n", array_slice(explode("\n", $str), $lines));
+}
+
+$str = str_chop_lines($str);
+
 function wp_syntax_head()
 {
   $css_url = WP_PLUGIN_URL . "/wp-syntax/wp-syntax.css";
@@ -131,14 +137,23 @@ function wp_syntax_highlight($match)
         $output .= wp_syntax_line_numbers($code, $line);
         $output .= "</td><td class=\"code\">";
         $output .= $geshi->parse_code();
-        $output .= "</td></tr></table>".clip(str_replace('%0D%0A%0D%0A%0D%0A', '', urlencode(strip_tags($wp_syntax_matches[0][0]))));
+
+		$clean = $wp_syntax_matches[0][0];	// Suck out Entire Pre tag
+
+		$clean = preg_replace('/^[ \t]*[\r\n]+/m', '', $clean);	// Remove empty lines
+		$clean = implode("\n", array_slice(explode("\n", $clean), 1));	// chop off top line (pre tag)
+		$clean = urlencode($clean);
+		$clean = str_replace(array('%3C%2Fpre%3E','%0D%0A%0D%0A%0D%0A'), "", $clean); // remote end pre tag
+		$output .= "</td></tr></table>".clip($clean);
+
+
+$string = preg_replace("/<img[^>]+\>/i", "", $string); 
     }
     else
     {
         $output .= "<div class=\"code\">";
         $output .= $geshi->parse_code();
         $output .= "</div>";
-		$output .= "FUCK";
     }
     return
 
