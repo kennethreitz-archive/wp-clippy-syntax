@@ -187,7 +187,7 @@ function wp_syntax_after_filter($content)
 $wp_syntax_token = md5(uniqid(rand()));
 
 // Add styling
-add_action('wp_head', 'wp_syntax_head');
+// add_action('wp_head', 'wp_syntax_head');
 
 // We want to run before other filters; hence, a priority of 0 was chosen.
 // The lower the number, the higher the priority.  10 is the default and

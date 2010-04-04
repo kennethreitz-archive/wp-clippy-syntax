@@ -4,7 +4,7 @@
  * --------
  * Author: Duncan Lock (dunc@dflock.co.uk)
  * Copyright: (c) 2006 Duncan Lock (http://dflock.co.uk/), Nigel McNie (http://qbnz.com/highlighter)
- * Release Version: 1.0.8.3
+ * Release Version: 1.0.8.6
  * Date Started: 2005/11/22
  *
  * T-SQL language file for GeSHi.
@@ -41,16 +41,16 @@ $language_data = array (
     'LANG_NAME' => 'T-SQL',
     'COMMENT_SINGLE' => array(1 => '--'),
     'COMMENT_MULTI' => array('/*' => '*/'),
-    'CASE_KEYWORDS' => GESHI_CAPS_UPPER,
+    'CASE_KEYWORDS' => GESHI_CAPS_NO_CHANGE,
     'QUOTEMARKS' => array("'", '"'),
     'ESCAPE_CHAR' => '\\',
     'KEYWORDS' => array(
         1 => array(
             // Datatypes
-            'bigint', 'int', 'smallint', 'tinyint', 'bit', 'decimal', 'numeric', 'money',
-            'smallmoney', 'float', 'real', 'datetime', 'smalldatetime', 'char', 'varchar',
-            'text', 'nchar', 'nvarchar', 'ntext', 'binary', 'varbinary', 'image', 'cursor',
-            'sql_variant', 'table', 'timestamp', 'uniqueidentifier',
+            'bigint', 'tinyint', 'money',
+            'smallmoney', 'datetime', 'smalldatetime',
+            'text', 'nvarchar', 'ntext', 'varbinary', 'image',
+            'sql_variant', 'uniqueidentifier',
 
             // Keywords
             'ABSOLUTE', 'ACTION', 'ADD', 'ADMIN', 'AFTER', 'AGGREGATE', 'ALIAS', 'ALLOCATE', 'ALTER', 'ARE', 'ARRAY', 'AS',
@@ -92,14 +92,14 @@ $language_data = array (
 
             //Configuration Functions
             '@@DATEFIRST','@@OPTIONS','@@DBTS','@@REMSERVER','@@LANGID','@@SERVERNAME',
-            '@@LANGUAGE','@@SERVICENAME','@@LOCK_TIMEOUT','@@SPID','@@MAX_CONNECTIONS','@@TEXTSIZE',
-            '@@MAX_PRECISION','@@VERSION','@@NESTLEVEL',
+            '@@LANGUAGE','@@SERVICENAME','@@LOCK_TIMEOUT','@@SPID','@@MAX_CONNECTIONS',
+            '@@TEXTSIZE','@@MAX_PRECISION','@@VERSION','@@NESTLEVEL',
 
             //Cursor Functions
             '@@CURSOR_ROWS','@@FETCH_STATUS',
 
             //Date and Time Functions
-            'DATEADD','DATEDIFF','DATENAME','DATEPART','DAY','GETDATE','GETUTCDATE','MONTH','YEAR',
+            'DATEADD','DATEDIFF','DATENAME','DATEPART','GETDATE','GETUTCDATE',
 
             //Mathematical Functions
             'ABS','DEGREES','RAND','ACOS','EXP','ROUND','ASIN','FLOOR','SIGN',
@@ -107,7 +107,7 @@ $language_data = array (
             'POWER','TAN','COT','RADIANS',
 
             //Meta Data Functions
-            'COL_LENGTH','fn_listextendedproperty','COL_NAME','FULLTEXTCATALOGPROPERTY',
+            'COL_LENGTH','COL_NAME','FULLTEXTCATALOGPROPERTY',
             'COLUMNPROPERTY','FULLTEXTSERVICEPROPERTY','DATABASEPROPERTY','INDEX_COL',
             'DATABASEPROPERTYEX','INDEXKEY_PROPERTY','DB_ID','INDEXPROPERTY','DB_NAME',
             'OBJECT_ID','FILE_ID','OBJECT_NAME','FILE_NAME','OBJECTPROPERTY','FILEGROUP_ID',
@@ -115,19 +115,16 @@ $language_data = array (
             'TYPEPROPERTY','FILEPROPERTY',
 
             //Security Functions
-            'fn_trace_geteventinfo','IS_SRVROLEMEMBER','fn_trace_getfilterinfo','SUSER_SID',
-            'fn_trace_getinfo','SUSER_SNAME','fn_trace_gettable','USER_ID','HAS_DBACCESS',
-            'IS_MEMBER',
+            'IS_SRVROLEMEMBER','SUSER_SID','SUSER_SNAME','USER_ID',
+            'HAS_DBACCESS','IS_MEMBER',
 
             //String Functions
-            'ASCII','NCHAR','SOUNDEX','CHAR','PATINDEX','SPACE','CHARINDEX',
-            'REPLACE','STR','DIFFERENCE','QUOTENAME','STUFF','LEFT','REPLICATE',
-            'SUBSTRING','LEN','REVERSE','UNICODE','LOWER','RIGHT','UPPER','LTRIM',
-            'RTRIM',
+            'ASCII','SOUNDEX','PATINDEX','CHARINDEX','REPLACE','STR',
+            'DIFFERENCE','QUOTENAME','STUFF','REPLICATE','SUBSTRING','LEN',
+            'REVERSE','UNICODE','LOWER','UPPER','LTRIM','RTRIM',
 
             //System Functions
-            'APP_NAME','COLLATIONPROPERTY','@@ERROR','fn_helpcollations',
-            'fn_servershareddrives','fn_virtualfilestats','FORMATMESSAGE',
+            'APP_NAME','COLLATIONPROPERTY','@@ERROR','FORMATMESSAGE',
             'GETANSINULL','HOST_ID','HOST_NAME','IDENT_CURRENT','IDENT_INCR',
             'IDENT_SEED','@@IDENTITY','ISDATE','ISNUMERIC','PARSENAME','PERMISSIONS',
             '@@ROWCOUNT','ROWCOUNT_BIG','SCOPE_IDENTITY','SERVERPROPERTY','SESSIONPROPERTY',
@@ -143,7 +140,7 @@ $language_data = array (
 
             //Aggregate functions
             'AVG', 'MAX', 'BINARY_CHECKSUM', 'MIN', 'CHECKSUM', 'SUM', 'CHECKSUM_AGG',
-            'STDEV', 'COUNT', 'STDEVP', 'COUNT_BIG', 'VAR', 'GROUPING', 'VARP'
+            'STDEV', 'COUNT', 'STDEVP', 'COUNT_BIG', 'VAR', 'VARP'
             ),
         3 => array(
             /*
@@ -306,7 +303,7 @@ $language_data = array (
             //Function/sp's higlighted brown.
             'fn_helpcollations', 'fn_listextendedproperty ', 'fn_servershareddrives',
             'fn_trace_geteventinfo', 'fn_trace_getfilterinfo', 'fn_trace_getinfo',
-            'fn_trace_gettable', 'fn_virtualfilestats',
+            'fn_trace_gettable', 'fn_virtualfilestats','fn_listextendedproperty',
             ),
         ),
     'SYMBOLS' => array(
